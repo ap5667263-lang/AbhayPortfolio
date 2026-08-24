@@ -1,0 +1,212 @@
+.skill {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 140px 8%;
+
+  background: #000;
+  color: #fff;
+
+  overflow: hidden;
+
+  // =====================================
+  // HEADER — plain, no border/btn style
+  // =====================================
+
+  &__header {
+    margin-bottom: 90px;
+  }
+
+  &__label {
+    margin: 0 0 12px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #555;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  &__heading {
+    margin: 0;
+    font-size: clamp(28px, 3.5vw, 46px);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #fff;
+
+    span {
+      color: #555;
+    }
+  }
+
+  // =====================================
+  // SECTION
+  // =====================================
+
+  &__section {
+    max-width: 1200px;
+    margin-bottom: 80px;
+  }
+
+  &__section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+
+    span {
+      font-size: 11px;
+      color: #444;
+      letter-spacing: 3px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 500;
+      color: #aaa;
+      letter-spacing: -0.3px;
+    }
+  }
+
+  // =====================================
+  // SKILL ITEMS — equal cards
+  // =====================================
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 110px));
+    gap: 12px;
+  }
+
+  &__items--pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 110px;
+    height: 100px;
+
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
+    background: #050505;
+
+    color: #777;
+    font-size: 12px;
+    text-align: center;
+    cursor: default;
+
+    // No visibility: hidden here — GSAP fromTo handles it
+    transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+
+    i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-style: normal;
+    }
+
+    span {
+      white-space: nowrap;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      border-color: #333;
+      color: #fff;
+    }
+  }
+
+  // =====================================
+  // PROFESSIONAL SKILLS — pill style
+  // =====================================
+
+  &__item--text {
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    padding: 14px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    background: transparent;
+    border-color: #222;
+
+    &:hover {
+      border-color: #555;
+      background: #080808;
+    }
+  }
+
+  // =====================================
+  // CURRENTLY LEARNING
+  // =====================================
+
+  &__learning {
+    margin-bottom: 0;
+
+    .skill__item {
+      border-color: #1e1e1e;
+      background: #060606;
+
+      &:hover {
+        border-color: #444;
+      }
+    }
+  }
+
+  // =====================================
+  // TABLET
+  // =====================================
+
+  @media (max-width: 900px) {
+    padding: 110px 6%;
+
+    &__header { margin-bottom: 70px; }
+    &__section { margin-bottom: 65px; }
+  }
+
+  // =====================================
+  // MOBILE
+  // =====================================
+
+  @media (max-width: 600px) {
+    padding: 90px 5%;
+
+    &__header { margin-bottom: 55px; }
+
+    &__section { margin-bottom: 55px; }
+
+    &__section-header {
+      gap: 12px;
+      margin-bottom: 20px;
+
+      h2 { font-size: 17px; }
+    }
+
+    &__items {
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 9px;
+    }
+
+    &__item {
+      padding: 18px 8px;
+      font-size: 12px;
+
+      i { font-size: 22px; }
+    }
+
+    &__item--text {
+      padding: 11px 14px;
+      font-size: 11px;
+    }
+  }
+}

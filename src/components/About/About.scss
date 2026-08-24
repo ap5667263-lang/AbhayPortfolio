@@ -1,0 +1,388 @@
+.about {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 120px 8%;
+
+  background: #000;
+  color: #fff;
+
+  overflow: hidden;
+
+  // =========================
+  // Header
+  // =========================
+
+  &__header {
+    margin-bottom: 80px;
+  }
+
+  &__label {
+    margin: 0 0 15px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #777;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  &__heading {
+    margin: 0;
+
+    font-size: clamp(50px, 7vw, 90px);
+    line-height: 0.95;
+
+    font-weight: 700;
+    letter-spacing: -4px;
+
+    span {
+      color: #555;
+    }
+  }
+
+  // =========================
+  // Bio
+  // =========================
+
+  &__bio {
+    max-width: 900px;
+    margin-bottom: 100px;
+
+    p {
+      margin: 0 0 22px;
+      font-size: 18px;
+      line-height: 1.85;
+      color: #888;
+
+      &:last-child { margin-bottom: 0; }
+
+      strong {
+        color: #ddd;
+        font-weight: 500;
+      }
+    }
+  }
+
+  // =========================
+  // What I Do cards
+  // =========================
+
+  &__work {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  &__work-card {
+    padding: 30px;
+    border: 1px solid #1e1e1e;
+    border-radius: 4px;
+    background: #050505;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      border-color: #333;
+      transform: translateY(-4px);
+    }
+  }
+
+  &__work-icon {
+    font-size: 26px;
+    color: #666;
+    margin-bottom: 16px;
+  }
+
+  &__work-card h4 {
+    margin: 0 0 10px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ddd;
+  }
+
+  &__work-card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666;
+  }
+
+  // =========================
+  // Sections
+  // =========================
+
+  &__section {
+    max-width: 1200px;
+
+    margin-bottom: 120px;
+  }
+
+  &__section-title {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 45px;
+
+    span {
+      font-size: 13px;
+      color: #666;
+      letter-spacing: 2px;
+    }
+
+    h3 {
+      margin: 0;
+
+      font-size: 28px;
+      font-weight: 500;
+
+      letter-spacing: -0.5px;
+    }
+  }
+
+  // =========================
+  // Skill Cards
+  // =========================
+
+  &__skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  &__card {
+    position: relative;
+    min-height: 180px;
+    padding: 28px;
+    border: 1px solid #222;
+    border-radius: 4px;
+    background: #050505;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      border-color: #444;
+    }
+  }
+
+  &__card h4 {
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  // =========================
+  // Technology Tags
+  // =========================
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 8px 13px;
+    border: 1px solid #292929;
+    border-radius: 20px;
+
+    font-size: 12px;
+    color: #888;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #fff;
+      border-color: #666;
+    }
+  }
+
+  &__tag-icon {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-style: normal;
+  }
+
+  // =========================
+  // Quick Facts
+  // =========================
+
+  &__facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  &__fact {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px 20px;
+    min-height: 110px;
+
+    background: #050505;
+    border: 1px solid #1e1e1e;
+    border-radius: 4px;
+
+    transition: border-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      border-color: #333;
+      transform: translateY(-4px);
+    }
+  }
+
+  &__fact-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 11px;
+    color: #555;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &__fact-icon {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-style: normal;
+  }
+
+  &__fact strong {
+    font-size: 15px;
+    font-weight: 500;
+    color: #ddd;
+    line-height: 1.4;
+  }
+
+  // =========================
+  // Currently Exploring
+  // =========================
+
+  &__exploring {
+    margin-bottom: 0;
+  }
+
+  &__explore-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+  }
+
+  &__explore-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 24px 10px;
+    background: #050505;
+    border: 1px solid #1e1e1e;
+    border-radius: 8px;
+
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    cursor: default;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+
+    transition: border-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      border-color: #333;
+      color: #fff;
+      transform: translateY(-5px);
+    }
+  }
+
+  &__explore-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 32px;
+    font-style: normal;
+
+    svg {
+      width: 32px !important;
+      height: 32px !important;
+    }
+  }
+
+  @media (max-width: 900px) {
+    padding: 100px 6%;
+
+    &__work {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__skills {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__facts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__explore-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 80px 5%;
+
+    &__header {
+      margin-bottom: 55px;
+    }
+
+    &__heading {
+      font-size: clamp(48px, 14vw, 70px);
+      letter-spacing: -3px;
+    }
+
+    &__section {
+      margin-bottom: 80px;
+    }
+
+    &__section-title {
+      margin-bottom: 30px;
+      h3 { font-size: 23px; }
+    }
+
+    &__work {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      min-height: auto;
+      padding: 25px;
+    }
+
+    &__skills {
+      grid-template-columns: 1fr;
+    }
+
+    &__facts {
+      grid-template-columns: 1fr;
+    }
+
+    &__explore-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
