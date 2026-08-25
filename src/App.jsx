@@ -16,7 +16,6 @@ function App() {
     <>
       {loading && <Loader onComplete={() => setLoading(false)} />}
 
-      {/* Portfolio sirf tab render ho jab loader complete ho */}
       {!loading && (
         <>
           <Navbar />
