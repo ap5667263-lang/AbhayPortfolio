@@ -2,7 +2,7 @@
 
 A modern, responsive personal portfolio website built with **React**, **GSAP**, and **SCSS**.
 
-🔗 **Live:** [abhayportfolio.netlify.app](#)  
+🔗 **Live:** [abhay-portfolio-g0vjs5f3r-ap5667263-lang.vercel.app](https://abhay-portfolio-g0vjs5f3r-ap5667263-lang.vercel.app/)  
 📁 **Repo:** [github.com/ap5667263-lang/AbhayPortfolio](https://github.com/ap5667263-lang/AbhayPortfolio)
 
 ---
