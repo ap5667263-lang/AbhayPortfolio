@@ -1,16 +1,79 @@
-# React + Vite
+# Abhay Pratap — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive personal portfolio website built with **React**, **GSAP**, and **SCSS**.
 
-Currently, two official plugins are available:
+🔗 **Live:** [abhayportfolio.netlify.app](#)  
+📁 **Repo:** [github.com/ap5667263-lang/AbhayPortfolio](https://github.com/ap5667263-lang/AbhayPortfolio)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 👨‍💻 About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Abhay Pratap**  
+B.Tech Computer Science — BBDITM (2023–2027)  
+Full-Stack Developer | Open to Work  
+📧 pratapabhay53506@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/abhay-pratap-623746341)
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🚀 Tech Stack
+
+| Category | Technologies |
+|----------|-------------|
+| Frontend | React, SCSS, GSAP |
+| Build Tool | Vite |
+| Animation | GSAP + ScrollTrigger |
+| Email | EmailJS |
+| Version Control | Git & GitHub |
+
+---
+
+## 📁 Sections
+
+- **Loader** — Intro animation on page load
+- **Home** — Hero section with profile photo, social links
+- **About** — Bio, skills, quick facts, currently exploring
+- **Skills** — Programming languages, frameworks, tools
+- **Education** — Academic timeline with internship
+- **Projects** — 4 projects with video/image previews
+- **Contact** — Contact form with EmailJS integration
+- **Footer** — Links, socials, copyright
+
+---
+
+## 🛠️ Projects
+
+| # | Project | Tech |
+|---|---------|------|
+| 01 | Abhay Portfolio | React, GSAP, SCSS, Vite |
+| 02 | Employee Management | React, Node.js, Express, MongoDB |
+| 03 | Instagram Clone | MERN Stack |
+| 04 | Pizza Delivery App | React, Redux, Node.js, MongoDB |
+
+---
+
+## ⚙️ Run Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/ap5667263-lang/AbhayPortfolio.git
+
+# Install dependencies
+cd AbhayPortfolio
+npm install
+
+# Start dev server
+npm run dev
+```
+
+---
+
+## 📬 Contact
+
+Feel free to reach out via the contact form on the portfolio or directly at:  
+📧 **pratapabhay53506@gmail.com**
+
+---
+
+*Built with ❤️ by Abhay Pratap*
