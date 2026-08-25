@@ -53,7 +53,6 @@ const skills = [
     tags: [
       { name: "Python", icon: <FaPython color="#3776ab" /> },
       { name: "Java",   icon: <FaJava color="#f89820" /> },
-      { name: "C/C++",  icon: <SiCplusplus color="#00599c" /> },
       { name: "DSA",    icon: <SiLeetcode color="#ffa116" /> },
     ],
   },
@@ -96,7 +95,17 @@ const work = [
   {
     icon: <FaMicrophone color="#f472b6" />,
     title: "Tech Events & Talks",
-    description: "Presenting at college tech events, workshops, and community sessions. Active contributor to tech culture at BBDITM.",
+    description: "Attended Larnovate at BBD University. Participated in workshops, tech talks, and innovation challenges. Active contributor to tech culture at BBDITM.",
+  },
+  {
+    icon: <FaBriefcase color="#a78bfa" />,
+    title: "Internship — Grass Tech Pvt. Ltd.",
+    description: "Completed Full Stack Development internship at Grass Tech Pvt. Ltd. Worked on real-world projects gaining hands-on industry experience.",
+  },
+  {
+    icon: <FaMicrophone color="#fb923c" />,
+    title: "Soft Skills Training",
+    description: "Completed professional Soft Skills training — communication, teamwork, leadership, and workplace readiness.",
   },
   {
     icon: <MdOutlineWork color="#a78bfa" />,
@@ -213,9 +222,9 @@ const About = () => {
       <div className="about__bio">
         <p>
           I am a dedicated <strong>B.Tech Computer Science</strong> student
-          at <strong>BBDITM</strong> with <strong>7+ CGPA</strong> and a strong focus on
+          at <strong>Babu Banarasi Das Institute of Technology & Management</strong> with <strong>7+ CGPA</strong> and a strong focus on
           Full Stack Development. Proficient in <strong>Python, JavaScript,</strong> and{" "}
-          <strong>C/C++</strong>, I bring adaptable coding practices to building modern,
+          <strong>Java</strong>, I bring adaptable coding practices to building modern,
           user-centric web applications.
         </p>
         <p>
@@ -226,9 +235,9 @@ const About = () => {
         </p>
         <p>
           My practical background includes an internship at{" "}
-          <strong>Upflairs Private Limited</strong>, building full-stack platforms like{" "}
-          <strong>hourcompany.in</strong> and <strong>Collabritz</strong>, and designing
-          data-driven AI/ML models for environmental rainwater harvesting optimization.
+          <strong>Grass Tech Pvt. Ltd.</strong>, where I worked on full-stack development.
+          I also attended <strong>Larnovate</strong> at Babu Banarasi Das Institute of Technology & Management and completed
+          professional <strong>Soft Skills training</strong>.
         </p>
       </div>
 

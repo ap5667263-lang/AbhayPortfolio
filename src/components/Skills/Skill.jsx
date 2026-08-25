@@ -68,6 +68,9 @@ const Skill = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
 
+      const root = skillRef.current;
+      if (!root) return;
+
       const st = (trigger) => ({
         scrollTrigger: {
           trigger,
@@ -77,27 +80,20 @@ const Skill = () => {
       });
 
       // Header
-      gsap.fromTo(".skill__label",
-        { y: 25, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.6, ease: "power3.out", ...st(".skill__header") }
-      );
-      gsap.fromTo(".skill__heading",
-        { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power4.out", delay: 0.15, ...st(".skill__header") }
-      );
+      const header = root.querySelector(".skill__header");
+      const label  = root.querySelector(".skill__label");
+      const heading = root.querySelector(".skill__heading");
+
+      if (label)   gsap.fromTo(label,   { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out", ...st(header) });
+      if (heading) gsap.fromTo(heading, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power4.out", delay: 0.15, ...st(header) });
 
       // Each section
-      document.querySelectorAll(".skill__section").forEach((section) => {
-        gsap.fromTo(
-          section.querySelector(".skill__section-header"),
-          { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, ease: "power3.out", ...st(section) }
-        );
-        gsap.fromTo(
-          section.querySelectorAll(".skill__item"),
-          { y: 25, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.4, stagger: 0.06, ease: "power3.out", delay: 0.15, ...st(section) }
-        );
+      root.querySelectorAll(".skill__section").forEach((section) => {
+        const secHeader = section.querySelector(".skill__section-header");
+        const items     = section.querySelectorAll(".skill__item");
+
+        if (secHeader) gsap.fromTo(secHeader, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out", ...st(section) });
+        if (items.length) gsap.fromTo(items,  { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, stagger: 0.06, ease: "power3.out", delay: 0.15, ...st(section) });
       });
 
     }, skillRef);

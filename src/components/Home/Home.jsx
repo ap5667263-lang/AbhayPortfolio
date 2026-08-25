@@ -9,16 +9,49 @@ const Home = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline();
+      const tl = gsap.timeline({ delay: 0.1 });
 
-      tl.from(".home__intro",       { y: 30, opacity: 0, duration: 0.7, ease: "power3.out" })
-        .from(".home__name",        { y: 80, opacity: 0, duration: 0.9, ease: "power4.out" }, "-=0.3")
-        .from(".home__title",       { y: 30, opacity: 0, duration: 0.6, ease: "power3.out" }, "-=0.4")
-        .from(".home__description", { y: 25, opacity: 0, duration: 0.6, ease: "power3.out" }, "-=0.3")
-        .from(".home__buttons",     { y: 25, opacity: 0, duration: 0.6, ease: "power3.out" }, "-=0.3")
-        .from(".home__social a",    { y: 20, opacity: 0, duration: 0.4, stagger: 0.12, ease: "power3.out" }, "-=0.2")
-        .from(".home__photo",       { x: 100, opacity: 0, duration: 1, ease: "power4.out" }, "-=0.6")
-        .from(".home__availability",{ y: 20, opacity: 0, duration: 0.5, ease: "power3.out" }, "-=0.5");
+      // Left content — stagger ek ek karke
+      tl.fromTo(".home__intro",
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }
+      )
+      .fromTo(".home__name",
+        { y: 60, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power4.out" },
+        "-=0.2"
+      )
+      .fromTo(".home__title",
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" },
+        "-=0.3"
+      )
+      .fromTo(".home__description",
+        { y: 25, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" },
+        "-=0.2"
+      )
+      .fromTo(".home__buttons .btn",
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, stagger: 0.15, ease: "power3.out" },
+        "-=0.2"
+      )
+      .fromTo(".home__social a",
+        { y: 15, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, stagger: 0.12, ease: "power3.out" },
+        "-=0.1"
+      )
+      // Right — photo slides in from right
+      .fromTo(".home__photo",
+        { x: 80, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.9, ease: "power4.out" },
+        "-=0.8"
+      )
+      .fromTo(".home__availability",
+        { y: 15, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
+        "-=0.3"
+      );
     }, homeRef);
 
     return () => ctx.revert();
@@ -60,7 +93,7 @@ const Home = () => {
             <span>GitHub</span>
           </a>
           <a
-            href="https://linkedin.com/in/"
+            href="https://www.linkedin.com/in/abhay-pratap-623746341"
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"
